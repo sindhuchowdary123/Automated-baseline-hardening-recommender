@@ -1,0 +1,68 @@
+
+        <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #ddd;">
+            <h1 style="text-align: center; color: #2c3e50;">Security Compliance Report</h1>
+
+            <h2>1. Report Summary</h2>
+            <p><strong>Baseline Document:</strong> /Users/muthavarapu.s/Desktop/Python Projects/Automated Baseline/FK_ISMS_310_Network_Device_Hardening_Palo_Alto_Firewall_v1.5.docx.pdf</p>
+            <p><strong>Compared with CIS Benchmark:</strong> /Users/muthavarapu.s/Downloads/CIS_Palo_Alto_Firewall_10_Benchmark_v1.2.0.pdf</p>
+            <p><strong>Overall Compliance Score:</strong> 42.86%</p>
+
+            <h2>2. Key Findings</h2>
+            <h3>Compliant Controls</h3>
+            <ul>
+        <li>Strong Password Policy</li>
+<li>Access Control</li>
+<li>User Management</li>
+
+            </ul>
+
+            <h3>Non-Compliant Controls</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Control</th>
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Expected Setting</th>
+                    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Current Setting</th>
+                </tr>
+        
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Disable LOAD DATA LOCAL INFILE</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">0</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+                </tr>
+            
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Error Limit</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">10</td>
+                </tr>
+            
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Server-Side Scripting</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">disabled</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">enabled</td>
+                </tr>
+            
+            </table>
+
+            <h3>Missing Controls</h3>
+            <ul>
+        <li>Encryption</li>
+
+            </ul>
+
+            <h2>3. Recommended Fixes</h2>
+            <ul>
+        <li><strong>Disable LOAD DATA LOCAL INFILE</strong>: Set load-infile=0 in MySQL configuration to prevent local file access. Current value: 1, Expected: 0</li>
+<li><strong>Error Limit</strong>: Change max_connect_errors=3 in my.cnf to prevent brute force attacks. Current value: 10</li>
+<li><strong>Server-Side Scripting</strong>: Disable server-side scripting to mitigate JavaScript injection attacks. Current state: enabled, Expected: disabled</li>
+<li><strong>Encryption</strong>: Configure TLS for database connections</li>
+
+            </ul>
+
+            <h2>4. Compliance Score Breakdown</h2>
+        
+            <p><strong>Compliant Controls:</strong> 3 (42.86%)</p>
+            <p><strong>Non-Compliant Controls:</strong> 3 (42.86%)</p>
+            <p><strong>Missing Controls:</strong> 1 (14.29%)</p>
+        </div>
+        
